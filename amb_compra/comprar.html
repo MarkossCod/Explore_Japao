@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Comprar Passagens | Viagem Japão</title>
+<link rel="stylesheet" href="comprar.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<!-- Script para animação de fade-in -->
+<script>
+  window.addEventListener('load', () => {
+    document.body.classList.add('fade-in');
+  });
+</script>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="../index.html">Início</a>
+    <a href="../amb_menu/Explore.html">Planeje a sua viagem</a>
+    <a href="../amb_compra/comprar.html">Compre aqui</a>
+    <a href="../amb_sobrenos/sobrenos.html">Quem somos</a>
+</nav>
+
+<!-- BANNER -->
+<section class="banner">
+  <div class="banner-conteudo">
+    <h1>Compre suas passagens para o Japão</h1>
+    <p>Garanta sua viagem e comece a realizar seu sonho</p>
+    <button onclick="document.getElementById('antecipado').scrollIntoView({behavior:'smooth'})">
+      Ver ingressos
+    </button>
+  </div>
+</section>
+
+<!-- ATRAÇÕES COM COMPRA ANTECIPADA -->
+<section id="antecipado" class="section-clara">
+  <h2>Atrações que exigem compra antecipada</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="../amb_compra/img_compra/Museu Ghibli.jpg" alt="Museu Ghibli" />
+      <h3>Museu Ghibli</h3>
+      <p>Ingressos limitados e vendidos com antecedência.</p>
+    </div>
+    <div class="card">
+      <img src="../amb_compra/img_compra/Ghibli Park.jpg" alt="Ghibli Park" />
+      <h3>Ghibli Park</h3>
+      <p>Parque oficial do Studio Ghibli em Nagoya.</p>
+    </div>
+    <div class="card">
+      <img src="../amb_compra/img_compra/teamLab Planets.jpg" alt="teamLab Planets" />
+      <h3>teamLab Planets</h3>
+      <p>Museu digital imersivo em Tóquio.</p>
+    </div>
+    <div class="card">
+      <img src="../amb_compra/img_compra/Universal Studios Japan.jpg" alt="Universal Studios Japan" />
+      <h3>Universal Studios Japan</h3>
+      <p>Parque temático com a área Super Nintendo World.</p>
+    </div>
+    <div class="card">
+      <img src="../amb_compra/img_compra/Tokyo DisneySea.jpg" alt="Tokyo DisneySea" />
+      <h3>Tokyo DisneySea</h3>
+      <p>Um dos parques Disney mais exclusivos do mundo.</p>
+    </div>
+    <div class="card">
+      <img src="../amb_compra/img_compra/Pokémon Café.jpg" alt="Pokemon Cafe" />
+      <h3>Pokémon Café</h3>
+      <p>Restaurante temático extremamente disputado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ATRAÇÕES COM COMPRA NO LOCAL -->
+<section class="section-suave">
+  <h2>Atrações com ingresso no local</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="../amb_compra/img_compra/Tokyo Tower.jpg" alt="Tokyo Tower" />
+      <h3>Tokyo Tower</h3>
+      <p>Mirante famoso de Tóquio com vista panorâmica da cidade.</p>
+    </div>
+
+    <div class="card">
+      <img src="../amb_compra/img_compra/Templo Senso-ji.jpg" alt="Templo Senso-ji" />
+      <h3>Templo Senso-ji</h3>
+      <p>Templo histórico em Asakusa com entrada gratuita.</p>
+    </div>
+
+    <div class="card">
+      <img src="../amb_compra/img_compra/Jardim Kenroku-en.jpg" alt="Jardim Kenroku-en" />
+      <h3>Jardim Kenroku-en</h3>
+      <p>Um dos jardins tradicionais mais bonitos do Japão.</p>
+    </div>
+
+    <div class="card">
+      <img src="../amb_compra/img_compra/Castelo de Osaka.jpg" alt="Castelo de Osaka" />
+      <h3>Castelo de Osaka</h3>
+      <p>Castelo histórico com museu com vista da cidade.</p>
+    </div>
+
+    <div class="card">
+      <img src="../amb_compra/img_compra/Monte Koya.jpg" alt="Monte Koya" />
+      <h3>Monte Koya</h3>
+      <p>Importante centro nas montanhas.</p>
+    </div>
+
+    <div class="card">
+      <img src="../amb_compra/img_compra/Nara Park.jpg" alt="Nara Park" />
+      <h3>Nara Park</h3>
+      <p>Parque famoso pelos cervos que circulam livremente.</p>
+    </div>
+  </div>
+
+  <!-- BOTÃO CHATGPT -->
+  <div class="botao-chatgpt-container">
+    <a 
+      href="https://chat.openai.com/?q=Explique%20detalhadamente%20sobre%20quais%20atra%C3%A7%C3%B5es%20que%20exigem%20compra%20antecipada%20no%20Jap%C3%A3o%20e%20quais%20atra%C3%A7%C3%B5es%20eu%20consigo%20comprar%20o%20ingresso%20quando%20j%C3%A1%20estiver%20l%C3%A1"
+      target="_blank"
+      class="botao-chatgpt">
+      Saiba mais sobre os ingressos
+    </a>
+  </div>
+</section>
+
+<!-- VOOS + MAPA -->
+<section class="section-branca">
+  <h2>Planeje sua viagem</h2>
+  <div class="voos-container">
+    <div class="voos">
+      <a href="https://www.latamairlines.com/br/pt" target="_blank">
+        <img src="../amb_compra/img_compra/lg_latam.png" alt="Logo LATAM" />
+        <span>LATAM Airlines</span>
+      </a>
+      <a href="https://www.voegol.com.br/nh/" target="_blank">
+        <img src="../amb_compra/img_compra/lg_gol.png" alt="Logo GOL" />
+        <span>GOL Linhas Aéreas</span>
+      </a>
+      <a href="https://www.voeazul.com.br/home/br/pt/home" target="_blank">
+        <img src="../amb_compra/img_compra/lg_azul.png" alt="Logo Azul" />
+        <span>Azul Linhas Aéreas</span>
+      </a>
+      <a href="https://www.ita-airways.com/pt_br/" target="_blank">
+        <img src="../amb_compra/img_compra/lg_ita.png" alt="Logo ITA Airways Brasil" />
+        <span>ITA Airways Brasil</span>
+      </a>
+    </div>
+    <div id="map"></div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer id="contato">
+  <p>© 2026 - Site desenvolvido por Markos Samuell</p>
+  <p>Projeto acadêmico - Viagens para o Japão</p>
+  <p>Instituição Senai CTTI-MG</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+var map = L.map('map'); // Criar mapa sem setView fixo
+
+/* MAPA BASE */
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+/* AEROPORTOS DO JAPÃO */
+var aeroportosJapao = [
+  ["Tokyo Haneda Airport", 35.5494, 139.7798],
+  ["Narita International Airport", 35.7720, 140.3929],
+  ["Kansai International Airport", 34.4347, 135.2440],
+  ["Osaka Itami Airport", 34.7855, 135.4382],
+  ["Chubu Centrair Airport", 34.8584, 136.8054]
+];
+
+/* AEROPORTOS DO BRASIL */
+var aeroportosBrasil = [
+  ["Aeroporto Internacional de São Paulo (GRU)", -23.4356, -46.4731],
+  ["Aeroporto Internacional do Rio de Janeiro (GIG)", -22.8090, -43.2506],
+  ["Aeroporto Internacional de Brasília (BSB)", -15.8692, -47.9208],
+  ["Aeroporto Internacional de Belo Horizonte (CNF)", -19.6280, -43.9713],
+  ["Aeroporto Internacional de Porto Alegre (POA)", -29.9939, -51.1714]
+];
+
+/* Adicionar marcadores e guardar posições para bounds */
+var allCoords = [];
+
+/* Função auxiliar para adicionar marcador com popup suave */
+function adicionarMarcador(latlng, nome){
+  var marker = L.marker(latlng).addTo(map);
+  marker.bindPopup("✈️ " + nome);
+
+  var timeoutId; // guarda referência do timeout
+  marker.on('mouseover', function(){
+    // cancela fechamento se o mouse voltar rápido
+    if(timeoutId) clearTimeout(timeoutId);
+    this.openPopup();
+  });
+  marker.on('mouseout', function(){
+    var m = this;
+    timeoutId = setTimeout(function(){
+      m.closePopup();
+    }, 300); // delay de 300ms antes de fechar
+  });
+  return marker;
+}
+
+/* MARCADORES JAPÃO */
+aeroportosJapao.forEach(function (a) {
+  var latlng = [a[1], a[2]];
+  adicionarMarcador(latlng, a[0]);
+  allCoords.push(latlng);
+});
+
+/* MARCADORES BRASIL */
+aeroportosBrasil.forEach(function (a) {
+  var latlng = [a[1], a[2]];
+  adicionarMarcador(latlng, a[0]);
+  allCoords.push(latlng);
+});
+
+/* Ajustar mapa para mostrar todos os marcadores */
+var bounds = L.latLngBounds(allCoords);
+map.fitBounds(bounds, { padding: [50, 50] });
+</script>
+
+</body>
+</html>
