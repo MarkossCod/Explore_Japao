@@ -1,7 +1,5 @@
 # 🌏 Guia Acadêmico de Viagem ao Japão
 
-![Banner Japão](https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1200&q=80)
-
 > Um projeto acadêmico que une aprendizado cultural e planejamento de viagem, ajudando qualquer pessoa a explorar o Japão de forma prática e enriquecedora.
 
 ---
@@ -39,8 +37,6 @@
 - Dicas culturais e etiqueta japonesa  
 - Informações sobre transporte, hospedagem e alimentação  
 - Curiosidades e fatos interessantes sobre a cultura japonesa  
-
-![Templo Japonês](https://images.unsplash.com/photo-1518684079-1b42ef3301f4?auto=format&fit=crop&w=800&q=80)
 
 ---
 
