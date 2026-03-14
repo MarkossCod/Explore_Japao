@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quem Somos - Viagem Japão</title>
+<link rel="stylesheet" href="sobrenos.css" />
+</head>
+
+<body class="fade-in">
+
+<!-- NAVBAR -->
+<nav>
+  <a href="../index.html">Início</a>
+  <a href="../amb_menu/Explore.html">Planeje a sua viagem</a>
+  <a href="../amb_compra/comprar.html">Compre aqui</a>
+  <a href="../amb_sobrenos/sobrenos.html">Quem somos</a>
+</nav>
+
+<section class="banner">
+  <div class="banner-conteudo">
+    <a href="#quemsomos" class="btn-banner">Saiba mais sobre agente</a>
+  </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section class="section-branca" id="quemsomos">
+  <div class="quem-container">
+<div class="quem-texto">
+  <h2 class="titulo-quemsomos">Prazer em conhecê-lo!</h2>
+      <p>
+        Eu sou Markos, estudante da área de Desenvolvimento de Sistemas e apaixonado por tecnologia, conhecimento e novas experiências. Criei este site como parte de um projeto acadêmico e também como uma forma de compartilhar inspiração.<br><br>
+        Meu objetivo é incentivar as pessoas a acreditarem em seus sonhos e buscarem aquilo que desejam conquistar, seja viajar para o Japão ou alcançar qualquer meta importante em suas vidas. Aqui você encontrará informações e dicas que podem ajudar nesse caminho.<br><br>
+      </p>
+    </div>
+    <img src="../amb_sobrenos/img_sobrenos/equipe_sobrenos.jpg" alt="Equipe do projeto de viagens ao Japão" />
+  </div>
+</section>
+
+<!-- MOTIVO DO SITE -->
+<section class="section-clara">
+  <h2>Por que este site foi criado?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Inspirar viajantes</h3>
+      <p>Muitas pessoas sonham em conhecer o Japão, mas não sabem por onde começar. Nosso site foi criado para inspirar e incentivar novos viajantes.</p>
+    </div>
+    <div class="card">
+      <h3>Facilitar o planejamento</h3>
+      <p>Reunimos informações úteis, opções de voos e conteúdos importantes para ajudar no planejamento da viagem de forma simples.</p>
+    </div>
+    <div class="card">
+      <h3>Compartilhar cultura</h3>
+      <p>Além da viagem, queremos apresentar um pouco da cultura japonesa, tradições e curiosidades que tornam o Japão um destino único.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE O SENAI -->
+<section class="section-ctti">
+  <div class="quem-container">
+    <img src="../amb_sobrenos/img_sobrenos/Senai-unidade.jpg" alt="Instituição SENAI CTTI-MG" />
+    <div class="quem-texto">
+      <h3>Centro de Treinamento em Tecnologia da Informação</h3>
+      <p>
+        O SENAI CTTI-MG é uma instituição referência na formação de profissionais na área de tecnologia da informação e inovação.<br><br>
+        Localizado em Minas Gerais, o centro oferece cursos técnicos e programas de formação voltados para desenvolvimento de software, redes, segurança da informação e diversas áreas tecnológicas.<br><br>
+        Este projeto foi desenvolvido como parte de uma atividade acadêmica, aplicando conhecimentos de programação web, design e desenvolvimento de sistemas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section id="duvidas" class="section-branca">
+  <h2>Tire sua dúvida aqui</h2>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Digite seu email" required />
+      </div>
+      <div class="form-group">
+        <label for="tipo-duvida">Tipo de dúvida</label>
+        <select id="tipo-duvida" required>
+          <option value="">Selecione</option>
+          <option>Passagens</option>
+          <option>Documentação</option>
+          <option>Turismo no Japão</option>
+          <option>Outros</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Sua mensagem</label>
+        <textarea id="mensagem" placeholder="Digite sua dúvida aqui..." required></textarea>
+      </div>
+      <button type="submit" class="botao-enviar">Enviar dúvida</button>
+    </form>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer id="contato">
+  <p>© 2026 - Site desenvolvido por Markos Samuell</p>
+  <p>Projeto acadêmico - Viagens para o Japão</p>
+  <p>Instituição Senai CTTI-MG</p>
+</footer>
+
+<!-- SCRIPT DE TRANSIÇÃO SUAVE -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Fade in ao carregar
+  document.body.classList.add("fade-in");
+
+  // Fade out ao clicar nos links do menu
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(e) {
+
+      const destino = this.href;
+
+      e.preventDefault();
+
+      document.body.classList.remove("fade-in");
+      document.body.classList.add("fade-out");
+
+      setTimeout(function(){
+        window.location.href = destino;
+      }, 500);
+
+    });
+  });
+
+});
+
+</script>
+
+</body>
+</html>

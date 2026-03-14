@@ -1,0 +1,405 @@
+/* PALETA DE CORES */
+:root {
+  --vermelho: #c40000;
+  --branco: #ffffff;
+  --cinza-claro: #f4f4f4;
+  --cinza-suave: #f8f8f8;
+  --rodape: #222222;
+  --texto1: #333333;
+  --texto2: #444444;
+  --sombra: rgba(0, 0, 0, 0.55);
+}
+
+/* SCROLL SUAVE */
+html{
+  scroll-behavior: smooth;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--branco);
+  color: var(--texto1);
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--vermelho);
+}
+
+/* BANNER */
+.banner {
+  height: 60vh;
+  background: url("../amb_sobrenos/img_sobrenos/banner_Sobrenos.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.banner-conteudo h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.titulo-pagina{
+  text-align: center;
+  padding: 40px 10%;
+  margin-bottom: -120px;
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-pagina h1{
+  font-size: 48px;
+  color: var(--vermelho);
+  margin-bottom: 10px;
+}
+
+.titulo-pagina p{
+  font-size: 18px;
+  color: var(--texto2);
+}
+
+/* RESPONSIVO DOS TÍTULOS */
+@media (max-width: 900px) {
+  .titulo-quemsomos,
+  .titulo-ctti {
+    font-size: 1.5rem;      /* menor que 2rem */
+    margin-bottom: 25px;    /* ajusta espaço entre título e texto */
+    width: fit-content;     /* mantém a linha vermelha proporcional */
+    word-wrap: break-word;  /* evita que o texto ultrapasse o container */
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-quemsomos,
+  .titulo-ctti {
+    font-size: 1.3rem;      /* ainda menor para celulares */
+    margin-bottom: 20px;
+  }
+}
+
+/* BOTÃO DO BANNER */
+.banner {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CONTEÚDO DO BANNER */
+.banner-conteudo{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end; /* botão desce para o final do banner */
+  justify-content: center;
+  padding-bottom: 20px; /* distância do fundo */
+}
+
+/* BOTÃO */
+.btn-banner{
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 16px 34px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px; /* botão arredondado profissional */
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  /* efeito profissional */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  backdrop-filter: blur(3px);
+}
+
+/* HOVER */
+.btn-banner:hover{
+  background: #a30000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
+/* CLIQUE */
+.btn-banner:active{
+  transform: scale(0.95);
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 10%;
+}
+
+.section-branca {
+  background: var(--cinza-suave);
+  margin-top: 120px;
+}
+
+.section-clara {
+  background: var(--cinza-claro);
+}
+
+.section-suave {
+  background: var(--cinza-suave);
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto 40px auto;
+  font-size: 2rem;
+  color: var(--vermelho);
+  font-weight: 900;
+  letter-spacing: 1px;
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--vermelho);
+  border-radius: 3px;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--vermelho);
+}
+
+/* QUEM SOMOS */
+.quem-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  width: 75%;
+}
+
+.quem-container img {
+  width: 100%;
+  max-width: 300px; /* diminui a imagem */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  object-fit: cover;
+  justify-self: center;
+}
+
+/* aumenta a imagem do Centro de Treinamento */
+.section-ctti .quem-container img {
+  max-width: 420px; /* novo tamanho maior */
+  width: 100%;
+  height: auto;
+}
+
+.quem-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  text-align: left;
+}
+
+.quem-texto p {
+  color: var(--texto2);
+  line-height: 1.6;
+}
+
+/* TÍTULO QUEM SOMOS */
+.titulo-quemsomos{
+  font-size: 2rem;
+  color: var(--vermelho);
+  margin-bottom: 40px;
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.titulo-quemsomos::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--vermelho);
+  border-radius: 3px;
+}
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: var(--branco);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--texto2);
+}
+
+
+/* FORMULÁRIO */
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--vermelho);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.botao-enviar {
+  background: var(--vermelho);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-enviar:hover {
+  background: #a30000;
+}
+
+/* Section Centro de Treinamento */
+.section-ctti {
+  background: var(--branco); /* branco suave */
+  padding: 60px 10%;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .quem-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+}
+
+/* FADE-IN / FADE-OUT */
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+} 
