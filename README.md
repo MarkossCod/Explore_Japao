@@ -62,6 +62,6 @@
 ## 💻 Como Executar Localmente
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/MarkossCod/Explore_Japao.git
 cd nome-do-repositorio
 open index.html  # ou abra no navegador de sua preferência
