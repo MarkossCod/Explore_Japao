@@ -1,0 +1,221 @@
+/* =========================
+   ESTILO GERAL + ANIMAÇÃO
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+
+    /* animação fade */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+
+/* =========================
+   MENU
+========================= */
+nav {
+    background-color: #c40000;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CABEÇALHO (BANNER)
+========================= */
+header {
+    height: 60vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("imagens/banner_index.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 22px;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   SEÇÃO MOTIVOS
+========================= */
+.motivos {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.motivos h2 {
+    font-size: 36px;
+    color: #c40000;
+    margin-bottom: 20px;
+
+    display: inline-block;
+    padding-bottom: 10px;
+
+    border-bottom: 4px solid #c40000;
+}
+
+.motivos p {
+    max-width: 900px;
+    margin: auto;
+
+    font-size: 19px;
+    line-height: 1.8;
+    color: #444;
+}
+
+
+/* =========================
+   GALERIA DE IMAGENS
+========================= */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    position: relative;
+
+    width: 350px;
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+}
+
+a.card {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* imagem */
+.card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+/* zoom da imagem */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   OVERLAY DOS CARDS
+========================= */
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    border-radius: 12px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+
+    header {
+        padding: 80px 20px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+}

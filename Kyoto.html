@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conheça Kyoto</title>
+    <link rel="stylesheet" href="Kyoto.css">
+</head>
+<body>
+<script>
+  window.addEventListener('load', () => {
+    document.body.classList.add('fade-in');
+  });
+</script>
+
+<!-- Navbar -->
+<nav>
+    <a href="index.html">Início</a>
+    <a href="amb_menu/Explore.html">Planeje a sua viagem</a>
+    <a href="amb_compra/comprar.html">Compre aqui</a>
+    <a href="amb_sobrenos/sobrenos.html">Quem somos</a>
+</nav>
+
+<!-- Banner -->
+<div class="banner"></div>
+
+<!-- Seção de descrição -->
+<section id="informacoes" class="content">
+    <h2>Kyoto - A Cidade dos Templos e Tradições</h2>
+    <p>
+        Kyoto, antiga capital do Japão, é famosa por sua rica história, templos milenares e belíssimos jardins. 
+        A cidade preserva a essência tradicional japonesa em cada esquina, com ruelas de casas antigas e cerimônias culturais.
+    </p>
+    <p>
+        Explore bairros históricos como Gion, conhecido pelas gueixas e casas de chá, ou Arashiyama, com seu famoso bosque de bambu. 
+        Não deixe de visitar o Pavilhão Dourado (Kinkaku-ji) e o Templo Fushimi Inari, com milhares de portões vermelhos (torii).
+    </p>
+    <p>
+        Com transporte eficiente, culinária típica deliciosa e uma atmosfera que mistura história e natureza, Kyoto é um destino imperdível para mergulhar na tradição japonesa.
+    </p>
+</section>
+
+<!-- Galeria de lugares -->
+<section class="galeria content" id="pontos">
+    <h2>Principais Lugares para Visitar em Kyoto</h2>
+    <div class="cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="imagens/img_Kyoto/Fushimi Inari.jpg" alt="Fushimi Inari">
+            <div class="descricao">
+                <h3>Fushimi Inari</h3>
+                <p>Templo famoso pelos milhares de portões vermelhos (torii).<br>Entrada gratuita.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="imagens/img_Kyoto/Pavilhão Dourado (Kinkaku-ji).jpg" alt="Pavilhão Dourado">
+            <div class="descricao">
+                <h3>Pavilhão Dourado (Kinkaku-ji)</h3>
+                <p>Templo icônico coberto de folhas de ouro, com jardins deslumbrantes.<br>Entrada: ~400 JPY (~R$16).</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="imagens/img_Kyoto/Bosque-bambu-arashiyama-kioto.jpg" alt="Bosque de Bambu">
+            <div class="descricao">
+                <h3>Bosque de Bambu de Arashiyama</h3>
+                <p>Um passeio pelo impressionante bosque de bambu.<br>Entrada gratuita.</p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="imagens/img_Kyoto/Bairro Gion.jpg" alt="Bairro Gion">
+            <div class="descricao">
+                <h3>Bairro Gion</h3>
+                <p>Bairro histórico famoso pelas gueixas, casas de chá e ruas tradicionais.<br>Passeio gratuito.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer id="contato">
+    <p>© 2026 - Site desenvolvido por Markos Samuell</p>
+    <p>Projeto acadêmico - Viagens para o Japão</p>
+    <p>Instituição Senai CTTI-MG</p>
+</footer>
+<script>
+  // Seleciona todos os links do menu com href que levam a outras páginas
+  document.querySelectorAll('nav a[href]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // cancela navegação imediata
+
+      const href = this.getAttribute('href');
+
+      // Adiciona a classe fade-out para animação
+      document.body.classList.add('fade-out');
+
+      // Após a transição, navega para a página
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500); // tempo igual ao transition do CSS
+    });
+  });
+</script>
+</body>
+</html>
